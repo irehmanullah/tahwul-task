@@ -2,7 +2,7 @@
 
 A responsive, pixel-perfect dashboard implementation for Tahwul's digital transformation platform, built with React, TypeScript, and Tailwind CSS.
 
-## 🚀 How to Run
+## How to Run
 
 1.  **Install Dependencies**
 
@@ -23,7 +23,7 @@ A responsive, pixel-perfect dashboard implementation for Tahwul's digital transf
     npm run build
     ```
 
-## 🛠 How It's Built
+## How It's Built
 
 - **Framework**: React (Vite) + TypeScript for type safety and performance.
 - **Styling**: Tailwind CSS for rapid, maintainable, and responsive styling. Configured with a custom theme matching Tahwul's brand colors.
@@ -35,14 +35,14 @@ A responsive, pixel-perfect dashboard implementation for Tahwul's digital transf
 - **Icons**: `lucide-react` for a clean, consistent icon set.
 - **Charts**: `recharts` for responsive, composable visualizations.
 
-## 🧠 Assumptions
+## Assumptions
 
 - **Data**: All data is mocked locally within components as requested (`JSON`-like structures).
 - **Routing**: The "Perspectives" link in the sidebar routes to the detailed "Strategic Planning" view (`/strategy`) to demonstrate the second screen.
 - **Design**: The sidebar is collapsible to optimize space on smaller screens, defaulting to expanded on desktop.
 - **Screen Resolution**: Optimized primarily for 1440px as per requirements, but fully responsive down to mobile.
 
-## 🚀 Developer Roadmap & Improvements
+## Developer Roadmap & Improvements
 
 As a professional developer, here are the key areas I would focus on to scale this project:
 
@@ -72,7 +72,6 @@ As a professional developer, here are the key areas I would focus on to scale th
 ### 5. Security
 
 - **Authentication**: Integrate secure auth providers (Auth0 / Clerk / NextAuth) properly.
-- **Environment Variables**: Ensure all API keys and secrets are handled via `.env` files and never exposed in the repo.
 
 ### 6. Accessibility (a11y)
 
