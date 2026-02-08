@@ -42,10 +42,39 @@ A responsive, pixel-perfect dashboard implementation for Tahwul's digital transf
 - **Design**: The sidebar is collapsible to optimize space on smaller screens, defaulting to expanded on desktop.
 - **Screen Resolution**: Optimized primarily for 1440px as per requirements, but fully responsive down to mobile.
 
-## 📈 Improvements (With More Time)
+## 🚀 Developer Roadmap & Improvements
 
-- **State Management**: Introduce Context API or Zustand for global state (e.g., user profile, sidebar preference, notification counts).
-- **Testing**: Add unit tests (Vitest) for utility functions and component rendering tests (React Testing Library).
-- **Accessibility**: improving ARIA labels and keyboard navigation focus management.
-- **Backend Integration**: Replace mock data with React Query hooks fetching from a real API.
-- **Dynamic Charts**: Make charts fully interactive with real-time data filtering.
+As a professional developer, here are the key areas I would focus on to scale this project:
+
+### 1. Architecture & Scalability
+
+- **State Management**: While local state works for now, introducing **Zustand** or **Redux Toolkit** would handle global UI state (user preferences, notifications) more efficiently as the app grows.
+- **Micro-Components**: Extract repeated patterns (badges, cards, headers) into a shared UI library (Storybook integration recommended).
+- **Internationalization (i18n)**: Implement `react-i18next` for full Arabic (RTL) and English (LTR) language support, which is critical for regional compliance.
+
+### 2. Performance Optimization
+
+- **Code Splitting**: Implement lazy loading (`React.lazy`) for route components to reduce initial bundle size.
+- **Memoization**: Use `useMemo` and `useCallback` for expensive calculations (e.g., filtering large datasets in the Evidence Table).
+- **Virtualization**: Use `react-window` for the tables and lists if data exceeds 100+ rows to maintain 60fps scrolling.
+
+### 3. Type Safety & Testing
+
+- **Strict Typing**: Enforce stricter TS configs (`noImplicitAny`) and share types between frontend and backend via a monorepo or shared package.
+- **Unit Testing**: Add **Vitest** for testing utility functions and complex component logic.
+- **E2E Testing**: Integrate **Playwright** or **Cypress** to automate critical user flows (Login -> Dashboard -> Strategy View).
+
+### 4. Developer Experience (DX)
+
+- **Linting & Formatting**: Configure **Husky** pre-commit hooks to run ESLint and Prettier automatically.
+- **CI/CD**: Set up GitHub Actions for automated testing and deployment to Vercel/Netlify on merge.
+
+### 5. Security
+
+- **Authentication**: Integrate secure auth providers (Auth0 / Clerk / NextAuth) properly.
+- **Environment Variables**: Ensure all API keys and secrets are handled via `.env` files and never exposed in the repo.
+
+### 6. Accessibility (a11y)
+
+- **ARIA & Keyboard Nav**: Ensure all interactive elements are keyboard accessible and screen-reader friendly (critical for government/enterprise dashboards).
+- **Color Contrast**: Verify all text/background combinations meet WCAG AA standards.
