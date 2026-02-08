@@ -350,11 +350,14 @@ export const ProgressStatusMatrix: React.FC = () => {
       </div>
 
       {/* Matrix */}
-      <div className="overflow-x-auto custom-scrollbar">
-        <div className="min-w-[1400px] px-6 py-6">
-          <div className="grid grid-cols-10 gap-3">
+      <div className="w-full">
+        <div className="px-4 py-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-10 gap-3">
             {perspectives.map((perspective, idx) => (
-              <div key={idx} className="flex flex-col gap-3 h-full">
+              <div
+                key={idx}
+                className="flex flex-col gap-3 h-full min-w-[96px]"
+              >
                 {/* Column Header */}
                 <div className="bg-[#1D3557] rounded-lg px-1 py-4 text-center h-[90px] flex flex-col justify-center shadow-sm shrink-0">
                   <div className="text-white text-[11px] font-semibold leading-tight line-clamp-3 px-1">

@@ -82,7 +82,12 @@ export const Sidebar = ({
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 py-6 px-3 space-y-1 overflow-y-auto">
+      <nav
+        className={cn(
+          "flex-1 py-6 px-3 space-y-1",
+          isCollapsed ? "overflow-visible" : "overflow-y-auto",
+        )}
+      >
         {navItems.map((item) => (
           <NavLink
             key={item.path}
